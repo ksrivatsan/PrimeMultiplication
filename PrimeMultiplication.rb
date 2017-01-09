@@ -1,3 +1,4 @@
+# Time complexity for this program is O(n^2)
 class PrimeMultiplication
 	
 	# attribute accessors for:
@@ -23,7 +24,7 @@ class PrimeMultiplication
 			no_of_primes = gets.chomp.to_i
 			input_right = (no_of_primes.to_i > 0) ? true : false
 			if no_of_primes <= 0
-				print "Please enter a number( > 0 ) \n"
+				print "\n Please enter a number( > 0 ) \n"
 				self.no_of_primes = 0
 			end
 			break if input_right
@@ -34,10 +35,10 @@ class PrimeMultiplication
 	# Same as get_user_input but for TDD to check if the program takes any other input other than a positive number
 	def get_user_input_for_test
 		no_of_primes = 0
-		print "\n Enter value for the number of primes you want: "
+		print "\n \t Enter value for the number of primes you want: "
 		no_of_primes = gets.chomp.to_i
 		if no_of_primes <= 0
-			print "Please enter a number( > 0 ) \n"
+			print "Please enter a number( > 0 ): "
 			self.no_of_primes = 0
 			return
 		end
@@ -93,6 +94,7 @@ class PrimeMultiplication
   end
 
   # print the Multiplication table on to the console
+  # Time complexity for this function is O(n^2)
   def print_prime_multiples
   	tabs = "\t" * (no_of_primes/2 - 3) rescue "\t"
     print "\n #{tabs} Multiplication Table for first #{no_of_primes} Prime numbers \n\n"
